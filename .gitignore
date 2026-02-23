@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+venv/
+env/
+portfolio_env/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# VS Code
+.vscode/
+
+
+
+# Model files
+*.h5
+*.pkl
+*.joblib
+*.model
+
+# Logs
+*.log
+
+# System files
+.DS_Store
+Thumbs.db
+# Large numpy files
+*.npy
+
