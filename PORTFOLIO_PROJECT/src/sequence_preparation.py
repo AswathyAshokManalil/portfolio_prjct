@@ -4,7 +4,7 @@ import os
 import pandas as pd
 import numpy as np
 from sklearn.preprocessing import MinMaxScaler
-
+import pickle 
 # ==============================
 # PARAMETERS
 # ==============================
@@ -82,4 +82,12 @@ np.save(os.path.join(OUTPUT_PATH, "y_train.npy"), y_train)
 np.save(os.path.join(OUTPUT_PATH, "X_test.npy"), X_test)
 np.save(os.path.join(OUTPUT_PATH, "y_test.npy"), y_test)
 
+# ==============================
+# SAVE SCALERS FOR LATER USE
+# ==============================
+print("💾 Saving scalers for each ticker...")
+with open(os.path.join(OUTPUT_PATH, "scalers.pkl"), 'wb') as f:
+    pickle.dump(scalers, f)
+print(f"✅ Scalers saved for {len(scalers)} tickers")
+print(f"📁 Scalers file: {os.path.join(OUTPUT_PATH, 'scalers.pkl')}")
 print(f"🎉 Arrays saved to {OUTPUT_PATH}")
